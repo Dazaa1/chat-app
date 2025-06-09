@@ -1,7 +1,7 @@
-const express  = require('express');
-const { createServer } = require('node:http');
-const { join } = require('node:path');
-const { Server } = require('socket.io');
+import express from 'express';
+import { createServer } from 'node:http';
+import { join } from 'node:path';
+import { Server } from 'socket.io';
 
 // initialse express app
 const app = express();
