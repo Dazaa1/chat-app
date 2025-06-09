@@ -17,10 +17,16 @@ app.get('/', (req, res) => {
 // listening on the connection event for upcoming connections.
 io.on('connection', (socket) => {
     console.log('a user connected');
+
     socket.on('disconnect', () => {
         console.log('user disconnected');
     });
-})
+
+    socket.on('chat message', (msg) => {
+        console.log('message: ' + msg);
+    });
+});
+
 
 // listening to port 3000
 server.listen(3000, () => {
